@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    build: .
+    environment:
+      - WIKI_USERNAME=${WIKI_USERNAME}
+      - WIKI_PASSWORD=${WIKI_PASSWORD}
+    volumes:
+      - ./playwright-report:/app/playwright-report
